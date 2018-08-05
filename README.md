@@ -21,7 +21,7 @@ above command is used to install the node_modules. Then start the server using t
 
 ng serve -o
 
-that means your server is running now , it will automatically opens the app in browser, if didn't open  you can check it out by going to http://localhost:4200/ from your browser.
+that means your server is running now , it will automatically opens the app in browser. If it didn't open ,  you can check it out by going to http://localhost:4200/ from your browser.
 The app will automatically reload if you change any of the source files.
 
 

@@ -1,0 +1,39 @@
+
+<div class="body">
+ 
+  <div class="loginbox">
+    <img src=".././assets/user.png" class="avatar">
+       
+    <div *ngIf="isVisible==='true'">
+      <h1>Login Here</h1>
+        <form>
+            <p>Username</p>
+            <input type="text" name="username" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password">
+           <a routerLink="/landpage"> <input type="submit" name="" value="Login"></a> <input type="submit" name="" (click)="signup()" value="Sign Up">
+            <a href="#">Lost your password?</a><br>
+            <a href="#">Don't have an account?</a>
+            
+        </form>
+      
+    </div>   
+<div *ngIf="isVisible==='false'">
+        <h1>Sign Up Here</h1>
+        <form>
+            <p>name</p>
+            <input type="text" name="username" placeholder="Enter your name">
+            <p>Mobile No:</p>
+            <input type="number" name="mobilenumber" placeholder="Enter your number">
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password">
+           <input type="submit" (click)="login()" name="" value="Sign Up">
+           
+        </form>
+
+    </div>
+
+
+
+    </div>
+    </div>

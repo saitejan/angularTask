@@ -1,0 +1,13 @@
+li:first-child {
+    color: blue;
+    border: 1px solid blue;
+}
+
+ul li {
+margin-top: 5px;
+margin-right: 5px;
+}
+
+.details {
+    line-height: 200%
+}

@@ -1,0 +1,40 @@
+
+
+
+<div>
+<nav>
+  <ul>
+    <li  >
+      <a routerLink="/landpage" [class.activated]="currentUrl !== '/landingpage'">
+      <img src=".././assets/machines.png" class="avatar"> <span style="color:white"> Machines </span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/usermanagement" [class.activated]="currentUrl === '/'">
+        <img src=".././assets/user.png" style="background-color: blue; color:white"  class="avatar"><span> User Management</span> 
+      </a>
+    </li>
+    <li>
+      <a routerLink="/rules" [class.activated]="currentUrl == '/'">
+        <img src=".././assets/rules.png" style="background-color: orange; color:white"  class="avatar"> <span> Rules</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/alertmanagement" [class.activated]="currentUrl == '/'">
+        <img src=".././assets/alert.png" style="background-color: violet; color:white" class="avatar"><span> Alert Management</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/logbook" [class.activated]="currentUrl == '/'">
+        <img src=".././assets/log.png" style="background-color: pink; color:white" class="avatar"><span> Log Book</span>
+      </a>
+    </li>
+<li>
+  <a routerLink="/loginpage">
+   <h4> Log Out </h4>
+  </a>
+</li>
+
+  </ul>
+</nav>
+</div>

@@ -1,0 +1,257 @@
+
+<div class="container-fluid">
+
+  <div class="row">
+
+<div>
+<app-sidebar></app-sidebar>
+</div>
+
+<div class="col-md-10 col-xs-12">
+
+    <div class="row panel" *ngFor = " let data of mdata">
+
+  <div class="col-md-3 col-sm-6">
+     
+    <img [src]="data.img"  style="width: 228px; height: 217px;">
+
+  </div>
+  
+  
+  <div class="col-md-6 col-xs-12">
+ <div>
+    <div>
+    <img [src]="data.statusUrl" style="width: 30px; height: 30px; border-radius: 50%;">
+    <span style="font-size: 25px">
+       {{data.status}}         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+       </span>
+     <span>
+        <i style="font-size:16px; color:lightgreen" class="fa">&#xf021;</i> {{data.sync}}
+     </span>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+     <span>
+       <button style="background-color: blue;  border-radius: 12px; color: white">Log book &#x21E8;</button>
+     </span>
+    </div>
+
+    <div class="details">
+      <span>Machine Name:&nbsp;&nbsp; {{data.machine}}  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Model: &nbsp;&nbsp; {{data.model}}</span>
+    </div>
+
+    <div>
+      <span class="details">
+        Serial no:&nbsp;&nbsp; {{data.serial}}       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Machine id:&nbsp;&nbsp; {{data.id}}
+      </span>
+    </div>
+  </div>
+    <ul class="list-group list-inline">
+     <li class="list-group-item list-group-item-info">
+        <h4 class="list-group-item-heading">  {{data.operationalhr}}   </h4>
+        <p class="list-group-item-text"> Operational Hours </p>
+     </li>
+     <li class="list-group-item list-group-item-info">
+        <h4 class="list-group-item-heading "> {{data.loadstate}} </h4>
+            <p class="list-group-item-text">  Load state </p>
+     </li>
+
+     <li class="list-group-item list-group-item-info">
+        <h4 class="list-group-item-heading">   {{data.machinehlth}} </h4>
+            <p class="list-group-item-text">  Machine Health </p>
+     </li>
+   
+
+      <li class="list-group-item list-group-item-info">
+          <h4 class="list-group-item-heading">{{data.machinestate}}</h4>
+              <p class="list-group-item-text">   Machine State </p>
+      </li>
+
+    </ul>
+
+  </div>
+ 
+ <div class="col-md-3 col-xs-12" style="text-align: center;margin-top: 3em;" >
+  <img [src]="data.wifi"  style="width: 75px; height:75px"> <br> <br>
+ 
+  <button style="border:1px solid green; border-radius: 70%; color: green">View Details</button>
+  
+  </div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+           <span style="font-size: 25px">
+         Offline         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+         </span>
+       <span>
+          <i style="font-size:16px; color:lightgreen" class="fa">&#xf021;</i> Last synced March 24, 2016
+       </span>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+       <span>
+         <button style="background-color: blue;  border-radius: 12px; color: white">Log book &#x21E8;</button>
+       </span>
+      </div>
+  
+      <div>
+        <span>Machine Name: IVRFIVPLUSIVRF  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Model: IVRFIVPLUSIVRF</span>
+      </div>
+  
+      <div>
+        <span>
+          Serial no: IVRFB14TC15F0003       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Machine id: 849072670948
+        </span>
+      </div>
+    </div>
+      <div >
+       <span class="block a">
+         0 Hrs 
+         Operational Hours
+       </span>
+       <span class="block b">
+         No load 
+         Load state
+       </span>
+  
+       <span class="block c">
+         Good
+         Machine Health
+        </span>
+     
+  
+        <span class="block d">
+            Off <br>
+            Machine State
+           </span>
+  
+      </div>
+
+    </div>
+   
+   <div class="rightpane">
+      
+    
+     
+
+    <button style="border: lightgreen; border-radius: 40%; color: white">View Details</button>
+  
+    
+    </div>
+  </section>
+  
+
+<section>
+
+    <div class="leftpane">
+       
+      <img src=".././assets/pic2.jpg">
+  
+    </div>
+    
+    
+    <div class="middlepane">
+   <div class="content">
+      <div>
+      <img src=".././assets/notok1.png" style="width: 30px; height: 30px; border-radius: 50%;">
+      <span style="font-size: 25px">
+         Faulty         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+         </span>
+       <span>
+          <i style="font-size:16px; color:lightgreen" class="fa">&#xf021;</i> Last synced March 24, 2016
+       </span>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+       <span>
+         <button style="background-color: blue;  border-radius: 12px; color: white">Log book &#x21E8;</button>
+       </span>
+      </div>
+  
+      <div>
+        <span>Machine Name: IVRFIVPLUSIVRF  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Model: IVRFIVPLUSIVRF</span>
+      </div>
+  
+      <div>
+        <span>
+          Serial no: IVRFB14TC15F0003       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Machine id: 849072670948
+        </span>
+      </div>
+    </div>
+      <div >
+       <span class="block a">
+         2.30 Hrs 
+         Operational Hours
+       </span>
+       <span class="block b">
+         No load 
+         Load state
+       </span>
+  
+       <span class="block c">
+         Good
+         Machine Health
+        </span>
+     
+  
+        <span class="block d">
+            Off <br>
+            Machine State
+           </span>
+  
+      </div>
+  
+   
+     
+  
+  
+  
+      
+    </div>
+   
+   <div class="rightpane">
+      
+      <img src=".././assets/alert.jpg" style="width: 50px; height:50px">
+
+    <button style="border: lightgreen; border-radius: 40%; color: white">View Details</button>
+  
+    
+    </div>
+  </section> -->
+
+

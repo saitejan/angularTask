@@ -11,9 +11,10 @@
             <input type="text" name="username" placeholder="Enter Username">
             <p>Password</p>
             <input type="password" name="password" placeholder="Enter Password">
-           <a routerLink="/landpage"> <input type="submit" name="" value="Login"></a> <input type="submit" name="" (click)="signup()" value="Sign Up">
+           <a routerLink="/landpage"> <input type="submit" name="" value="Login"></a>
+            <input type="submit" name="" (click)="signup()" value="Sign Up">
             <a href="#">Lost your password?</a><br>
-            <a href="#">Don't have an account?</a>
+            <a style=" cursor: pointer;"(click)="signup()">Don't have an account?</a>
             
         </form>
       

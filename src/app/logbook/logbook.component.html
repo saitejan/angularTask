@@ -6,15 +6,48 @@
 <div>
 <app-sidebar></app-sidebar>
 </div>
-
-<div class="col-md-8 col-xs-12">
+<div class="col-md-8 col-xs-12 table">
   
-  <div *ngFor="let data of mdata">
-    <h1>{{data.item}}</h1>
-  </div>
+      <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" >
+      </mat-form-field>
 
-<h2>
-  Your logs will be shown here
-</h2>
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+    <!-- NAME Column -->
+    <ng-container matColumnDef="label">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>NAME </th>
+      <td mat-cell *matCellDef="let element">{{element.icon}} {{element.label}} </td>
+    </ng-container>
+  
+    <!-- value Column -->
+    <ng-container matColumnDef="value">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> VALUE </th>
+      <td mat-cell *matCellDef="let element"> {{element.value}} {{element.unit}} </td>
+    </ng-container>
+  
+    <!-- min Column -->
+    <ng-container matColumnDef="min">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> MIN </th>
+      <td mat-cell *matCellDef="let element"> {{element.min}} </td>
+    </ng-container>
+  
+    <!-- max Column -->
+    <ng-container matColumnDef="max">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> MAX </th>
+      <td mat-cell *matCellDef="let element"> {{element.max}} </td>
+    </ng-container>
+  
+    <!-- timestamp column -->
+    <ng-container matColumnDef="timestamp">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> TIMESTAMP </th>
+      <td mat-cell *matCellDef="let element"> {{element.timestamp | date: 'MMM dd,yyyy h:mm:ss a'}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns;  sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+<!-- 
+  <mat-paginator [pageSizeOptions]="[5]"></mat-paginator>
+   -->
 
 </div>

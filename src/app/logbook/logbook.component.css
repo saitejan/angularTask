@@ -1,0 +1,26 @@
+table {
+  width: 80%;
+}
+
+mat-form-field {
+  font-size: 14px;
+  width: 80%;
+  background-color: bisque;
+}
+
+td, th {
+  width: 25%;
+}
+td {
+  height: 25%;
+}
+
+mat-header-cell {
+  background-color: pink;
+  
+}
+
+.table {
+  height: 250px;
+  overflow: auto;
+}
